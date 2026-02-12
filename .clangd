@@ -1,0 +1,20 @@
+CompileFlags:
+    Remove:
+        - "--expt-extended-lambda"
+        - "-gencode*"              # 使用通配符，一次性移除所有 gencode 开头的参数
+        - "--generate-code*"       # 同上
+        - "-rdc=true"
+        - "-forward-unknown-to-host-compiler"
+        - "--expt-relaxed-constexpr"
+        - "-arch=*"                # 移除旧的架构指定
+        - "--options-file"         # 必须移除
+        - "-Xcompiler*"
+    Add: 
+        - "-xcuda"                 # 强制识别为 CUDA
+        - "-std=c++17"             # 匹配您的 C++ 标准
+        - "--cuda-gpu-arch=sm_120"  # 使用较新的架构 (Hopper)，更接近 RTX 5090
+        - "--cuda-path=/usr/local/cuda" # 确保找到 CUDA 头文件
+        - "-I/usr/local/cuda/include"
+        - "-I/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/include"
+        - "-I/home/ubuntu/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/include/python3.12"
+        - "-I/home/ubuntu/llm_ops/source"

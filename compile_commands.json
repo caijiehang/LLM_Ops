@@ -1,0 +1,28 @@
+[
+  {
+    "arguments": [
+      "/usr/local/cuda/bin/nvcc",
+      "-c",
+      "-I./source/",
+      "-o",
+      "test",
+      "test.cu"
+    ],
+    "directory": "/home/ubuntu/llm_ops",
+    "file": "/home/ubuntu/llm_ops/test.cu",
+    "output": "/home/ubuntu/llm_ops/test"
+  },
+  {
+    "arguments": [
+      "/usr/local/cuda/bin/nvcc",
+      "-c",
+      "-I./source/",
+      "-o",
+      "test",
+      "source/host/device_query.cu"
+    ],
+    "directory": "/home/ubuntu/llm_ops",
+    "file": "/home/ubuntu/llm_ops/source/host/device_query.cu",
+    "output": "/home/ubuntu/llm_ops/test"
+  }
+]
