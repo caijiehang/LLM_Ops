@@ -163,6 +163,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/LLM_OPS.dir/DependInfo.cmake"
+  "CMakeFiles/llm_ops.dir/DependInfo.cmake"
   "CMakeFiles/nanobind-static.dir/DependInfo.cmake"
   )

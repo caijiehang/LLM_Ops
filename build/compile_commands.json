@@ -61,8 +61,14 @@
 },
 {
   "directory": "/home/ubuntu/llm_ops/build",
-  "command": "/usr/bin/c++ -DLLM_OPS_EXPORTS -I/home/ubuntu/llm_ops/source -I/home/ubuntu/llm_ops/source/utils -I/home/ubuntu/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/include/python3.12 -I/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/include -isystem /usr/local/cuda/targets/x86_64-linux/include -isystem /usr/local/cuda/targets/x86_64-linux/include/cccl -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.o -c /home/ubuntu/llm_ops/source/host/device_query.cpp",
+  "command": "/usr/bin/c++ -Dllm_ops_EXPORTS -I/home/ubuntu/llm_ops/source -I/home/ubuntu/llm_ops/source/utils -I/home/ubuntu/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/include/python3.12 -I/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/include -isystem /usr/local/cuda/targets/x86_64-linux/include -isystem /usr/local/cuda/targets/x86_64-linux/include/cccl -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/llm_ops.dir/source/bindings/binding.cpp.o -c /home/ubuntu/llm_ops/source/bindings/binding.cpp",
+  "file": "/home/ubuntu/llm_ops/source/bindings/binding.cpp",
+  "output": "CMakeFiles/llm_ops.dir/source/bindings/binding.cpp.o"
+},
+{
+  "directory": "/home/ubuntu/llm_ops/build",
+  "command": "/usr/bin/c++ -Dllm_ops_EXPORTS -I/home/ubuntu/llm_ops/source -I/home/ubuntu/llm_ops/source/utils -I/home/ubuntu/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/include/python3.12 -I/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/include -isystem /usr/local/cuda/targets/x86_64-linux/include -isystem /usr/local/cuda/targets/x86_64-linux/include/cccl -std=gnu++17 -fPIC -fvisibility=hidden -o CMakeFiles/llm_ops.dir/source/host/device_query.cpp.o -c /home/ubuntu/llm_ops/source/host/device_query.cpp",
   "file": "/home/ubuntu/llm_ops/source/host/device_query.cpp",
-  "output": "CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.o"
+  "output": "CMakeFiles/llm_ops.dir/source/host/device_query.cpp.o"
 }
 ]

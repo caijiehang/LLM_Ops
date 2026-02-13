@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LLM_OPS
+# Target rules for targets named llm_ops
 
 # Build rule for target.
-LLM_OPS: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LLM_OPS
-.PHONY : LLM_OPS
+llm_ops: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 llm_ops
+.PHONY : llm_ops
 
 # fast build rule for target.
-LLM_OPS/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/build
-.PHONY : LLM_OPS/fast
+llm_ops/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/build
+.PHONY : llm_ops/fast
 
 #=============================================================================
 # Target rules for targets named nanobind-static
@@ -382,12 +382,36 @@ home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.s
 .PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.s
 
+source/bindings/binding.o: source/bindings/binding.cpp.o
+.PHONY : source/bindings/binding.o
+
+# target to build an object file
+source/bindings/binding.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/bindings/binding.cpp.o
+.PHONY : source/bindings/binding.cpp.o
+
+source/bindings/binding.i: source/bindings/binding.cpp.i
+.PHONY : source/bindings/binding.i
+
+# target to preprocess a source file
+source/bindings/binding.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/bindings/binding.cpp.i
+.PHONY : source/bindings/binding.cpp.i
+
+source/bindings/binding.s: source/bindings/binding.cpp.s
+.PHONY : source/bindings/binding.s
+
+# target to generate assembly for a file
+source/bindings/binding.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/bindings/binding.cpp.s
+.PHONY : source/bindings/binding.cpp.s
+
 source/host/device_query.o: source/host/device_query.cpp.o
 .PHONY : source/host/device_query.o
 
 # target to build an object file
 source/host/device_query.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/host/device_query.cpp.o
 .PHONY : source/host/device_query.cpp.o
 
 source/host/device_query.i: source/host/device_query.cpp.i
@@ -395,7 +419,7 @@ source/host/device_query.i: source/host/device_query.cpp.i
 
 # target to preprocess a source file
 source/host/device_query.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/host/device_query.cpp.i
 .PHONY : source/host/device_query.cpp.i
 
 source/host/device_query.s: source/host/device_query.cpp.s
@@ -403,7 +427,7 @@ source/host/device_query.s: source/host/device_query.cpp.s
 
 # target to generate assembly for a file
 source/host/device_query.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/host/device_query.cpp.s
 .PHONY : source/host/device_query.cpp.s
 
 # Help Target
@@ -414,7 +438,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... LLM_OPS"
+	@echo "... llm_ops"
 	@echo "... nanobind-static"
 	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.o"
 	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.i"
@@ -446,6 +470,9 @@ help:
 	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.o"
 	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.i"
 	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.s"
+	@echo "... source/bindings/binding.o"
+	@echo "... source/bindings/binding.i"
+	@echo "... source/bindings/binding.s"
 	@echo "... source/host/device_query.o"
 	@echo "... source/host/device_query.i"
 	@echo "... source/host/device_query.s"

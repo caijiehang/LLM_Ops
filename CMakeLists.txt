@@ -27,25 +27,26 @@ execute_process(
 find_package(nanobind CONFIG REQUIRED)
 
 # 定义源文件列表，将需要编译的 .cu 文件列在此处
-nanobind_add_module(LLM_OPS  # 这将生成 cuda_test.cpython-xxx.so
+nanobind_add_module(llm_ops  # 这将生成 cuda_test.cpython-xxx.so
+    source/bindings/binding.cpp
     source/host/device_query.cpp
 )
 
 # ==========================================
 # 4. 设置头文件搜索路径
 # ==========================================
-target_include_directories(LLM_OPS PRIVATE
+target_include_directories(llm_ops PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/source
     ${CMAKE_CURRENT_SOURCE_DIR}/source/utils
     ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES}
 )
 
 # 将CUDA Runtime动态库链接到程序中
-target_link_libraries(LLM_OPS PRIVATE 
+target_link_libraries(llm_ops PRIVATE 
     CUDA::cudart 
 )
 
 # 分离编译，开启可重定位设备代码
-set_target_properties(LLM_OPS PROPERTIES
+set_target_properties(llm_ops PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )

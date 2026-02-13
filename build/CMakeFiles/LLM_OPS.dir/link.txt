@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -shared  -o LLM_OPS.cpython-312-x86_64-linux-gnu.so CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.o  -Wl,-rpath,/usr/local/cuda-13.0/targets/x86_64-linux/lib libnanobind-static.a /usr/local/cuda-13.0/targets/x86_64-linux/lib/libcudart.so -ldl /usr/lib/x86_64-linux-gnu/librt.a

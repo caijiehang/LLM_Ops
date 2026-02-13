@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/ubuntu/llm_ops/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/LLM_OPS.dir/all
+all: CMakeFiles/llm_ops.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/LLM_OPS.dir/codegen
+codegen: CMakeFiles/llm_ops.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,41 +75,41 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/LLM_OPS.dir/clean
+clean: CMakeFiles/llm_ops.dir/clean
 clean: CMakeFiles/nanobind-static.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/LLM_OPS.dir
+# Target rules for target CMakeFiles/llm_ops.dir
 
 # All Build rule for target.
-CMakeFiles/LLM_OPS.dir/all: CMakeFiles/nanobind-static.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=1,2 "Built target LLM_OPS"
-.PHONY : CMakeFiles/LLM_OPS.dir/all
+CMakeFiles/llm_ops.dir/all: CMakeFiles/nanobind-static.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=1,2,3 "Built target llm_ops"
+.PHONY : CMakeFiles/llm_ops.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/LLM_OPS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/llm_ops/build/CMakeFiles 13
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LLM_OPS.dir/all
+CMakeFiles/llm_ops.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/llm_ops/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/llm_ops.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/llm_ops/build/CMakeFiles 0
-.PHONY : CMakeFiles/LLM_OPS.dir/rule
+.PHONY : CMakeFiles/llm_ops.dir/rule
 
 # Convenience name for target.
-LLM_OPS: CMakeFiles/LLM_OPS.dir/rule
-.PHONY : LLM_OPS
+llm_ops: CMakeFiles/llm_ops.dir/rule
+.PHONY : llm_ops
 
 # codegen rule for target.
-CMakeFiles/LLM_OPS.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=1,2 "Finished codegen for target LLM_OPS"
-.PHONY : CMakeFiles/LLM_OPS.dir/codegen
+CMakeFiles/llm_ops.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target llm_ops"
+.PHONY : CMakeFiles/llm_ops.dir/codegen
 
 # clean rule for target.
-CMakeFiles/LLM_OPS.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/clean
-.PHONY : CMakeFiles/LLM_OPS.dir/clean
+CMakeFiles/llm_ops.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/clean
+.PHONY : CMakeFiles/llm_ops.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/nanobind-static.dir
@@ -118,7 +118,7 @@ CMakeFiles/LLM_OPS.dir/clean:
 CMakeFiles/nanobind-static.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target nanobind-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14 "Built target nanobind-static"
 .PHONY : CMakeFiles/nanobind-static.dir/all
 
 # Build rule for subdir invocation for target.
@@ -135,7 +135,7 @@ nanobind-static: CMakeFiles/nanobind-static.dir/rule
 # codegen rule for target.
 CMakeFiles/nanobind-static.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Finished codegen for target nanobind-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ubuntu/llm_ops/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14 "Finished codegen for target nanobind-static"
 .PHONY : CMakeFiles/nanobind-static.dir/codegen
 
 # clean rule for target.

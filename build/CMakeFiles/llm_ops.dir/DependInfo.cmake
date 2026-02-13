@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubuntu/llm_ops/source/host/device_query.cpp" "CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.o" "gcc" "CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.o.d"
+  "/home/ubuntu/llm_ops/source/bindings/binding.cpp" "CMakeFiles/llm_ops.dir/source/bindings/binding.cpp.o" "gcc" "CMakeFiles/llm_ops.dir/source/bindings/binding.cpp.o.d"
+  "/home/ubuntu/llm_ops/source/host/device_query.cpp" "CMakeFiles/llm_ops.dir/source/host/device_query.cpp.o" "gcc" "CMakeFiles/llm_ops.dir/source/host/device_query.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
