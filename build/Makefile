@@ -430,6 +430,30 @@ source/host/device_query.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/host/device_query.cpp.s
 .PHONY : source/host/device_query.cpp.s
 
+source/host/launcher.o: source/host/launcher.cu.o
+.PHONY : source/host/launcher.o
+
+# target to build an object file
+source/host/launcher.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/host/launcher.cu.o
+.PHONY : source/host/launcher.cu.o
+
+source/host/launcher.i: source/host/launcher.cu.i
+.PHONY : source/host/launcher.i
+
+# target to preprocess a source file
+source/host/launcher.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/host/launcher.cu.i
+.PHONY : source/host/launcher.cu.i
+
+source/host/launcher.s: source/host/launcher.cu.s
+.PHONY : source/host/launcher.s
+
+# target to generate assembly for a file
+source/host/launcher.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops.dir/build.make CMakeFiles/llm_ops.dir/source/host/launcher.cu.s
+.PHONY : source/host/launcher.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -476,6 +500,9 @@ help:
 	@echo "... source/host/device_query.o"
 	@echo "... source/host/device_query.i"
 	@echo "... source/host/device_query.s"
+	@echo "... source/host/launcher.o"
+	@echo "... source/host/launcher.i"
+	@echo "... source/host/launcher.s"
 .PHONY : help
 
 

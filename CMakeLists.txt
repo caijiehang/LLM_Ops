@@ -30,6 +30,7 @@ find_package(nanobind CONFIG REQUIRED)
 nanobind_add_module(llm_ops  # 这将生成 cuda_test.cpython-xxx.so
     source/bindings/binding.cpp
     source/host/device_query.cpp
+    source/host/launcher.cu
 )
 
 # ==========================================
@@ -38,6 +39,7 @@ nanobind_add_module(llm_ops  # 这将生成 cuda_test.cpython-xxx.so
 target_include_directories(llm_ops PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/source
     ${CMAKE_CURRENT_SOURCE_DIR}/source/utils
+    ${CMAKE_CURRENT_SOURCE_DIR}/source/kernels
     ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES}
 )
 
@@ -49,4 +51,17 @@ target_link_libraries(llm_ops PRIVATE
 # 分离编译，开启可重定位设备代码
 set_target_properties(llm_ops PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/scripts"
+)
+
+# 2. 生成 .pyi 到 scripts
+add_custom_command(
+    TARGET llm_ops POST_BUILD
+    # 关键点：使用 cmake -E env 临时设置 PYTHONPATH
+    # 这样 python 就能在 scripts 文件夹里找到你的 .so 模块了
+    COMMAND ${CMAKE_COMMAND} -E env "PYTHONPATH=${CMAKE_SOURCE_DIR}/scripts"
+            "${Python_EXECUTABLE}" -m nanobind.stubgen -m llm_ops -O "${CMAKE_SOURCE_DIR}/scripts"
+    
+    COMMENT "正在生成 Python 接口文件 (.pyi) ... 模块路径: ${CMAKE_SOURCE_DIR}/scripts"
+    VERBATIM
 )

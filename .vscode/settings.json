@@ -1,3 +1,9 @@
 {
-    "commentTranslate.source": "naomi233.comment-translate-transmart-transmart"
+    "commentTranslate.source": "naomi233.comment-translate-transmart-transmart",
+    "python.analysis.extraPaths": [
+        "./scripts"
+    ],
+    "python.autoComplete.extraPaths": [
+        "./scripts"
+    ]
 }
