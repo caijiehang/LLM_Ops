@@ -1,4 +1,4 @@
-#include "source/utils/device_query.cuh"
+#include "source/utils/device_query.h"
 
 int main()
 {

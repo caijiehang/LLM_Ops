@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ubuntu/llm_ops/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
