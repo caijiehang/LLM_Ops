@@ -103,6 +103,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ubuntu/cmake-4.2.3/Modules/FindCUDAToolkit.cmake"
   "/home/ubuntu/cmake-4.2.3/Modules/FindPackageHandleStandardArgs.cmake"
   "/home/ubuntu/cmake-4.2.3/Modules/FindPackageMessage.cmake"
+  "/home/ubuntu/cmake-4.2.3/Modules/FindPython.cmake"
+  "/home/ubuntu/cmake-4.2.3/Modules/FindPython/Support.cmake"
   "/home/ubuntu/cmake-4.2.3/Modules/FindThreads.cmake"
   "/home/ubuntu/cmake-4.2.3/Modules/Internal/CMakeCUDAArchitecturesAll.cmake"
   "/home/ubuntu/cmake-4.2.3/Modules/Internal/CMakeCUDAArchitecturesNative.cmake"
@@ -133,6 +135,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ubuntu/cmake-4.2.3/Modules/Platform/Linux-NVIDIA-CUDA.cmake"
   "/home/ubuntu/cmake-4.2.3/Modules/Platform/Linux.cmake"
   "/home/ubuntu/cmake-4.2.3/Modules/Platform/UnixPaths.cmake"
+  "/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/cmake/nanobind-config-version.cmake"
+  "/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/cmake/nanobind-config.cmake"
   "/home/ubuntu/llm_ops/CMakeLists.txt"
   "CMakeFiles/4.2.3/CMakeCUDACompiler.cmake"
   "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
@@ -159,5 +163,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/cuda_test.dir/DependInfo.cmake"
+  "CMakeFiles/LLM_OPS.dir/DependInfo.cmake"
+  "CMakeFiles/nanobind-static.dir/DependInfo.cmake"
   )

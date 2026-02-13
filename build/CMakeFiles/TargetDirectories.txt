@@ -1,3 +1,4 @@
-/home/ubuntu/llm_ops/build/CMakeFiles/cuda_test.dir
+/home/ubuntu/llm_ops/build/CMakeFiles/LLM_OPS.dir
+/home/ubuntu/llm_ops/build/CMakeFiles/nanobind-static.dir
 /home/ubuntu/llm_ops/build/CMakeFiles/edit_cache.dir
 /home/ubuntu/llm_ops/build/CMakeFiles/rebuild_cache.dir

@@ -92,8 +92,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_EXPORT_COMPILE_COMMANDS:UNINITIALIZED=1
+//Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/ubuntu/llm_ops/build/CMakeFiles/pkgRedirects
@@ -453,6 +453,9 @@ LLM_Ops_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 LLM_Ops_SOURCE_DIR:STATIC=/home/ubuntu/llm_ops
 
+//The directory containing a CMake configuration file for nanobind.
+nanobind_DIR:PATH=/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/cmake
+
 
 ########################
 # INTERNAL cache entries
@@ -520,6 +523,8 @@ CMAKE_EXE_LINKER_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_EXE_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_EXPORT_COMPILE_COMMANDS
+CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 //Name of external makefile project generator.
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
@@ -755,6 +760,29 @@ CUDA_nvtx3_interop_LIBRARY-ADVANCED:INTERNAL=1
 CUDA_pcsamplingutil_LIBRARY-ADVANCED:INTERNAL=1
 //Details about finding CUDAToolkit
 FIND_PACKAGE_MESSAGE_DETAILS_CUDAToolkit:INTERNAL=[/usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl][/usr/local/cuda/targets/x86_64-linux/lib/libcudart.so][/usr/local/cuda/bin][v13.0.48()]
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/home/ubuntu/infra/bin/python3.12][/home/ubuntu/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/include/python3.12][found components: Interpreter Development.Module ][v3.12.12(3.8)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+NB_ABI:INTERNAL=312
+NB_DIR:INTERNAL=/home/ubuntu/infra/lib/python3.12/site-packages/nanobind
+NB_FREE_THREADED:INTERNAL=0
+NB_OPT:INTERNAL=$<OR:$<CONFIG:Release>,$<CONFIG:MinSizeRel>>
+NB_OPT_SIZE:INTERNAL=$<OR:$<CONFIG:Release>,$<CONFIG:MinSizeRel>,$<CONFIG:RelWithDebInfo>>
+NB_SUFFIX:INTERNAL=.cpython-312-x86_64-linux-gnu.so
+NB_SUFFIX_S:INTERNAL=.abi3.so
+//Compiler reason failure
+_Python_Compiler_REASON_FAILURE:INTERNAL=
+_Python_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=59931c7e811a960f3cd890a9eb98aad4
+//Development reason failure
+_Python_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python_EXECUTABLE:INTERNAL=/home/ubuntu/infra/bin/python3.12
+//Path to a file.
+_Python_INCLUDE_DIR:INTERNAL=/home/ubuntu/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/include/python3.12
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;12;64;<none>;cpython-312-x86_64-linux-gnu;abi3;/home/ubuntu/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12;/home/ubuntu/infra/lib/python3.12;/home/ubuntu/infra/lib/python3.12/site-packages;/home/ubuntu/infra/lib/python3.12/site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=0a4d58e1a60df3d560b06a06ff0c790e
+//NumPy reason failure
+_Python_NumPy_REASON_FAILURE:INTERNAL=
 

@@ -3,6 +3,9 @@ project(LLM_Ops LANGUAGES CXX CUDA)
 
 # 强制不使用响应文件 (.rsp) 来传递 include 路径
 set(CMAKE_CUDA_USE_RESPONSE_FILE_FOR_INCLUDES OFF)
+# 自动生成 compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(Python_FIND_VIRTUALENV FIRST)
 
 # 基础配置
 set(CMAKE_CXX_STANDARD 17)
@@ -11,39 +14,38 @@ set(CMAKE_CUDA_STANDARD 17)
 
 # 设置 CUDA 架构（例如 80 是 A100，89 是 4090/Ada）
 # 如果不设置，CMake 会尝试检测或报错
-set(CMAKE_CUDA_ARCHITECTURES 100) 
+set(CMAKE_CUDA_ARCHITECTURES native)
 find_package(CUDAToolkit REQUIRED)
+
 # 寻找环境中的 python 和 nanobind
-# find_package(Python 3.8 REQUIRED COMPONENTS Interpreter Development.Module)
-# find_package(nanobind REQUIRED)
+find_package(Python 3.8 REQUIRED COMPONENTS Interpreter Development.Module)
+
+# 检测并找到nanobind包
+execute_process(
+  COMMAND "${Python_EXECUTABLE}" -m nanobind --cmake_dir
+  OUTPUT_STRIP_TRAILING_WHITESPACE OUTPUT_VARIABLE nanobind_ROOT)
+find_package(nanobind CONFIG REQUIRED)
 
 # 定义源文件列表，将需要编译的 .cu 文件列在此处
-add_executable(cuda_test
-    test.cu                        # 你的主入口文件 (必须包含 main 函数)
-    source/host/device_query.cpp    # 你依赖的其他 .cu/.cpp 实现文件
+nanobind_add_module(LLM_OPS  # 这将生成 cuda_test.cpython-xxx.so
+    source/host/device_query.cpp
 )
-
-# # 创建 nanobind 模板
-# nanobind_add_module(
-#     llm_ops_cuda    # 在 Python 中 import 的模块名
-#     NB_STATIC
-#     ${SOURCE_FILES}
-# )
 
 # ==========================================
 # 4. 设置头文件搜索路径
 # ==========================================
-target_include_directories(cuda_test PRIVATE
+target_include_directories(LLM_OPS PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/source
     ${CMAKE_CURRENT_SOURCE_DIR}/source/utils
     ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES}
 )
 
-target_link_libraries(cuda_test PRIVATE 
+# 将CUDA Runtime动态库链接到程序中
+target_link_libraries(LLM_OPS PRIVATE 
     CUDA::cudart 
 )
 
-# CUDA 特殊设置
-set_target_properties(cuda_test PROPERTIES
+# 分离编译，开启可重定位设备代码
+set_target_properties(LLM_OPS PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )

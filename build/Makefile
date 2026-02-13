@@ -117,24 +117,277 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cuda_test
+# Target rules for targets named LLM_OPS
 
 # Build rule for target.
-cuda_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cuda_test
-.PHONY : cuda_test
+LLM_OPS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LLM_OPS
+.PHONY : LLM_OPS
 
 # fast build rule for target.
-cuda_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_test.dir/build.make CMakeFiles/cuda_test.dir/build
-.PHONY : cuda_test/fast
+LLM_OPS/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/build
+.PHONY : LLM_OPS/fast
+
+#=============================================================================
+# Target rules for targets named nanobind-static
+
+# Build rule for target.
+nanobind-static: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 nanobind-static
+.PHONY : nanobind-static
+
+# fast build rule for target.
+nanobind-static/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/build
+.PHONY : nanobind-static/fast
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.cpp.s
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.o
+
+# target to build an object file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.o
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.o
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.i: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.i
+
+# target to preprocess a source file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.i
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.i
+
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.s: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.s
+
+# target to generate assembly for a file
+home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.s
+.PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.cpp.s
 
 source/host/device_query.o: source/host/device_query.cpp.o
 .PHONY : source/host/device_query.o
 
 # target to build an object file
 source/host/device_query.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_test.dir/build.make CMakeFiles/cuda_test.dir/source/host/device_query.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.o
 .PHONY : source/host/device_query.cpp.o
 
 source/host/device_query.i: source/host/device_query.cpp.i
@@ -142,7 +395,7 @@ source/host/device_query.i: source/host/device_query.cpp.i
 
 # target to preprocess a source file
 source/host/device_query.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_test.dir/build.make CMakeFiles/cuda_test.dir/source/host/device_query.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.i
 .PHONY : source/host/device_query.cpp.i
 
 source/host/device_query.s: source/host/device_query.cpp.s
@@ -150,32 +403,8 @@ source/host/device_query.s: source/host/device_query.cpp.s
 
 # target to generate assembly for a file
 source/host/device_query.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_test.dir/build.make CMakeFiles/cuda_test.dir/source/host/device_query.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LLM_OPS.dir/build.make CMakeFiles/LLM_OPS.dir/source/host/device_query.cpp.s
 .PHONY : source/host/device_query.cpp.s
-
-test.o: test.cu.o
-.PHONY : test.o
-
-# target to build an object file
-test.cu.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_test.dir/build.make CMakeFiles/cuda_test.dir/test.cu.o
-.PHONY : test.cu.o
-
-test.i: test.cu.i
-.PHONY : test.i
-
-# target to preprocess a source file
-test.cu.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_test.dir/build.make CMakeFiles/cuda_test.dir/test.cu.i
-.PHONY : test.cu.i
-
-test.s: test.cu.s
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.cu.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_test.dir/build.make CMakeFiles/cuda_test.dir/test.cu.s
-.PHONY : test.cu.s
 
 # Help Target
 help:
@@ -185,13 +414,41 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... cuda_test"
+	@echo "... LLM_OPS"
+	@echo "... nanobind-static"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/error.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/implicit.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_enum.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_func.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_internals.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_ndarray.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_static_property.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/nb_type.s"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.o"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.i"
+	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/trampoline.s"
 	@echo "... source/host/device_query.o"
 	@echo "... source/host/device_query.i"
 	@echo "... source/host/device_query.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
 .PHONY : help
 
 
