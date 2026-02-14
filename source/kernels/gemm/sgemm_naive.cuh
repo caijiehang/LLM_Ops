@@ -1,11 +1,10 @@
 #pragma once
 
-#include <__clang_cuda_builtin_vars.h>
 #include <cuda_runtime.h>
 #include <sys/types.h>
 
 
-__global__ void __inline__ sgemm_naive_kernel(int M,int N, int K, float alpha, float *A, float* B, float beta, float *C)
+__global__ void sgemm_naive_kernel(int M,int N, int K, float alpha,const float *A,const float* B, float beta, float *C)
 {
     uint row = blockDim.y * blockIdx.y + threadIdx.y;
     uint col = blockDim.x * blockIdx.x + threadIdx.x;

@@ -1,8 +1,13 @@
 #include <nanobind/nanobind.h>
+#include <stdexcept>
 #include "device_query.h"
+#include "host/launcher.h"
 #include "nanobind/nb_defs.h"
+#include "nanobind/ndarray.h"
+
 
 namespace nb = nanobind;
+using namespace nb::literals;
 
 NB_MODULE(llm_ops, m){
     nb::class_<cuda_utils::DeviceMemoryInfo>(m,"memoryProps")
@@ -35,4 +40,19 @@ NB_MODULE(llm_ops, m){
     m.def("get_device_propertity", &cuda_utils::get_device_propertity,"Get cuda device property",nb::arg("deviceId")=0);
     m.def("print_device_properties", &cuda_utils::print_device_properties,"Print cuda device property",nb::arg("deviceId")=0);
 
+    m.def("sgemm_naive", [](
+        int M, int N, int K,float alpha,
+        nb::ndarray<const float, nb::ndim<2>, nb::device::cuda, nb::c_contig> A,    //const float
+        nb::ndarray<const float, nb::ndim<2>, nb::device::cuda, nb::c_contig> B,
+        float beta,
+        nb::ndarray<float, nb::ndim<2>, nb::device::cuda, nb::c_contig> C
+    ){
+        if(A.shape(0) != M || A.shape(1) != K) throw std::runtime_error("Shape mistake with A");
+        if(B.shape(0) != K || B.shape(1) != N) throw std::runtime_error("Shape mistake with B");
+        if(C.shape(0) != M || C.shape(1) != N) throw std::runtime_error("Shape mistake with C");
+        
+        sgemm_naive(M,N,K,alpha,A.data(),B.data(),beta,C.data());
+    },
+    "M"_a, "N"_a, "K"_a, "alpha"_a, "A"_a.noconvert(), "B"_a.noconvert(), "beta"_a, "C"_a.noconvert(),
+    "A naive SGEMM implementation calling CUDA code");
 };

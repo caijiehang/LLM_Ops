@@ -783,6 +783,8 @@ _Python_INCLUDE_DIR:INTERNAL=/home/ubuntu/.local/share/uv/python/cpython-3.12-li
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;12;64;<none>;cpython-312-x86_64-linux-gnu;abi3;/home/ubuntu/.local/share/uv/python/cpython-3.12.12-linux-x86_64-gnu/lib/python3.12;/home/ubuntu/infra/lib/python3.12;/home/ubuntu/infra/lib/python3.12/site-packages;/home/ubuntu/infra/lib/python3.12/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=0a4d58e1a60df3d560b06a06ff0c790e
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python_NumPy_REASON_FAILURE:INTERNAL=
 
