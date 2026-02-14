@@ -69,7 +69,7 @@ namespace cuda_utils{
         std::cout << "=============COMPUTE INFORMATION================" << std::endl;
         std::cout << "the number of the MultiProcessor is  :          " << props.compute.multiProcessorCount <<std::endl;
         std::cout << "max grid size is :                              " << "(" << props.compute.maxGridSize.x << "," << props.compute.maxGridSize.y << "," << props.compute.maxGridSize.z << ")" << std::endl;
-        std::cout << "max block size is :                             " << "(" << props.compute.maxThreadsDim.x << "," << props.compute.maxThreadsDim.y << "," << props.compute.maxThreadsDim.z << ")" << std::endl;
+        std::cout << "Max threads per block dimension: :              " << "(" << props.compute.maxThreadsDim.x << "," << props.compute.maxThreadsDim.y << "," << props.compute.maxThreadsDim.z << ")" << std::endl;
         std::cout << "max blocks per MultiProcessor is :              " << props.compute.maxBlocksPerMultiProcessor << std::endl;
         std::cout << "max threads per block is :                      " << props.compute.maxThreadsPerBlock << std::endl;
         std::cout << "the core clock rate is :                        " << props.compute.core_clock_rate << std::endl;
