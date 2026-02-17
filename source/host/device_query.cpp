@@ -72,7 +72,7 @@ namespace cuda_utils{
         std::cout << "Max threads per block dimension: :              " << "(" << props.compute.maxThreadsDim.x << "," << props.compute.maxThreadsDim.y << "," << props.compute.maxThreadsDim.z << ")" << std::endl;
         std::cout << "max blocks per MultiProcessor is :              " << props.compute.maxBlocksPerMultiProcessor << std::endl;
         std::cout << "max threads per block is :                      " << props.compute.maxThreadsPerBlock << std::endl;
-        std::cout << "the core clock rate is :                        " << props.compute.core_clock_rate << std::endl;
+        std::cout << "the core clock rate is :                        " << props.compute.core_clock_rate <<"kHz"<< std::endl;
         
     }
 }
