@@ -27,7 +27,7 @@ def test_sgemm_naive():
     nvtx.range_pop()
     
     nvtx.range_push("Custom_Naive_SGEMM")
-    llm_ops.sgemm_naive(M,N,K,alpha,A,B,beta,C)
+    llm_ops.sgemm_coalesce(M,N,K,alpha,A,B,beta,C)
     torch.cuda.synchronize()
     nvtx.range_pop()
 

@@ -592,6 +592,8 @@ CMakeFiles/llm_ops.dir/source/host/device_query.cpp.o
 CMakeFiles/llm_ops.dir/source/host/launcher.cu.o
  /home/ubuntu/llm_ops/source/host/launcher.cu
  /home/ubuntu/llm_ops/source/host/launcher.h
+ /home/ubuntu/llm_ops/source/kernels/gemm/sgemm.cuh
+ /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_coalesce.cuh
  /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_naive.cuh
  /home/ubuntu/llm_ops/source/utils/util.cuh
  /usr/include/alloca.h

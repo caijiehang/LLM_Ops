@@ -589,6 +589,8 @@ CMakeFiles/llm_ops.dir/source/host/device_query.cpp.o: /home/ubuntu/llm_ops/sour
 
 CMakeFiles/llm_ops.dir/source/host/launcher.cu.o: /home/ubuntu/llm_ops/source/host/launcher.cu \
   /home/ubuntu/llm_ops/source/host/launcher.h \
+  /home/ubuntu/llm_ops/source/kernels/gemm/sgemm.cuh \
+  /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_coalesce.cuh \
   /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_naive.cuh \
   /home/ubuntu/llm_ops/source/utils/util.cuh \
   /usr/include/alloca.h \
@@ -910,6 +912,8 @@ CMakeFiles/llm_ops.dir/source/host/launcher.cu.o: /home/ubuntu/llm_ops/source/ho
 
 /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_naive.cuh:
 
+/home/ubuntu/llm_ops/source/kernels/gemm/sgemm_coalesce.cuh:
+
 /home/ubuntu/llm_ops/source/host/launcher.cu:
 
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
@@ -927,6 +931,8 @@ CMakeFiles/llm_ops.dir/source/host/launcher.cu.o: /home/ubuntu/llm_ops/source/ho
 /usr/include/c++/11/bits/ostream.tcc:
 
 /usr/include/c++/11/bits/locale_classes.tcc:
+
+/home/ubuntu/llm_ops/source/kernels/gemm/sgemm.cuh:
 
 /usr/include/c++/11/bits/locale_classes.h:
 

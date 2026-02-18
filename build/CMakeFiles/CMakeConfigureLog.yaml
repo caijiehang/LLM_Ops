@@ -31555,3 +31555,65 @@ events:
       CMAKE_SYSTEM_INCLUDE_PATH:
         - "/usr/include/X11"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/home/ubuntu/cmake-4.2.3/Modules/FindCUDAToolkit.cmake:1088 (find_path)"
+      - "CMakeLists.txt:18 (find_package)"
+    mode: "path"
+    variable: "CUDAToolkit_CUBLAS_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cublas_v2.h"
+    candidate_directories:
+      - "/usr/local/cuda/targets/x86_64-linux/include/"
+      - "/usr/local/cuda/targets/x86_64-linux/include/cccl/"
+    found: "/usr/local/cuda/targets/x86_64-linux/include/"
+    search_context:
+      ENV{PATH}:
+        - "/home/ubuntu/infra/bin"
+        - "/home/ubuntu/cmake-4.2.3/bin"
+        - "/home/ubuntu/clangd_21.1.8/bin"
+        - "/usr/local/cuda/bin"
+        - "/home/ubuntu/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/ubuntu/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli"
+        - "/home/ubuntu/.vscode-server/cli/servers/Stable-c3a26841a84f20dfe0850d0a5a9bd01da4f003ea/server/bin/remote-cli"
+        - "/home/ubuntu/.local/bin"
+        - "/home/ubuntu/cmake-4.2.3/bin"
+        - "/home/ubuntu/clangd_21.1.8/bin"
+        - "/home/ubuntu/.local/bin"
+        - "/usr/local/cuda/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/snap/bin"
+        - "/home/ubuntu/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/home"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_INCLUDE_PATH:
+        - "/usr/include/X11"
+...

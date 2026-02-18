@@ -182,7 +182,9 @@ CMakeFiles/llm_ops.dir/source/host/launcher.cu.o : /home/ubuntu/llm_ops/source/h
     /usr/include/c++/11/utility \
     /usr/include/c++/11/bits/stl_relops.h \
     /usr/include/c++/11/initializer_list \
+    /home/ubuntu/llm_ops/source/kernels/gemm/sgemm.cuh \
     /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_naive.cuh \
+    /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_coalesce.cuh \
     /home/ubuntu/llm_ops/source/utils/util.cuh \
     /usr/include/c++/11/iostream \
     /usr/include/c++/11/ostream \
