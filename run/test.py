@@ -18,7 +18,7 @@ def test_sgemm_naive():
 
     for _ in range(10):
         llm_ops.sgemm_naive(M,N,K,alpha,A,B,beta,C)
-    
+        torch.cuda.synchronize()
     print("Profiling...")
 
     nvtx.range_push("PyTorch_SGEMM")
@@ -27,7 +27,7 @@ def test_sgemm_naive():
     nvtx.range_pop()
     
     nvtx.range_push("Custom_Naive_SGEMM")
-    llm_ops.sgemm_coalesce(M,N,K,alpha,A,B,beta,C)
+    llm_ops.sgemm_sm(M,N,K,alpha,A,B,beta,C)
     torch.cuda.synchronize()
     nvtx.range_pop()
 

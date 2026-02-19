@@ -71,4 +71,20 @@ NB_MODULE(llm_ops, m){
     },
     "M"_a, "N"_a, "K"_a, "alpha"_a, "A"_a.noconvert(), "B"_a.noconvert(), "beta"_a, "C"_a.noconvert(),
     "A SGEMM implementation coalesce global memory access calling CUDA code");
+
+    m.def("sgemm_sm",[](
+        int M, int N, int K, float alpha,
+        nb::ndarray<const float, nb::ndim<2>, nb::device::cuda, nb::c_contig>A,
+        nb::ndarray<const float, nb::ndim<2>, nb::device::cuda, nb::c_contig>B,
+        float beta,
+        nb::ndarray<float, nb::ndim<2>, nb::device::cuda, nb::c_contig>C
+    ){
+        if(A.shape(0) != M || A.shape(1) != K) throw std::runtime_error("Shape mistake with A");
+        if(B.shape(0) != K || B.shape(1) != N) throw std::runtime_error("Shape mistake with B");
+        if(C.shape(0) != M || C.shape(1) != N) throw std::runtime_error("Shape mistake with C");
+
+        sgemm_sm(M, N, K, alpha, A.data(), B.data(), beta, C.data());
+    },
+    "M"_a, "N"_a, "K"_a, "alpha"_a, "A"_a.noconvert(), "B"_a.noconvert(), "beta"_a, "C"_a.noconvert(),
+    "Shared-memory optimized SGEMM CUDA kernel");
 };

@@ -4,7 +4,7 @@
 
 __host__ __device__ int  inline div_up(int a,int b)
 {
-    return a+b-1/b;
+    return (a+b-1)/b;
 }
 
 void check_cuda_error(cudaError_t error,int line, const char* file)
