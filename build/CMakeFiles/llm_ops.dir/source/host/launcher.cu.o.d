@@ -185,6 +185,7 @@ CMakeFiles/llm_ops.dir/source/host/launcher.cu.o : /home/ubuntu/llm_ops/source/h
     /home/ubuntu/llm_ops/source/kernels/gemm/sgemm.cuh \
     /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_naive.cuh \
     /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_coalesce.cuh \
+    /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_sm.cuh \
     /home/ubuntu/llm_ops/source/utils/util.cuh \
     /usr/include/c++/11/iostream \
     /usr/include/c++/11/ostream \
