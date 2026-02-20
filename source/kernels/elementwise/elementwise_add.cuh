@@ -23,8 +23,8 @@ __global__ void elementwise_add_f32x4_kernel(float *a, float *b, float *c, int N
        float4 reg_c;
        reg_c.x = reg_a.x + reg_b.x;
        reg_c.y = reg_a.y + reg_b.y;
-       reg_c.z = reg_a.z + reg_c.z;
-       reg_c.w = reg_c.w + reg_c.w;
+       reg_c.z = reg_a.z + reg_b.z;
+       reg_c.w = reg_a.w + reg_b.w;
 
        reinterpret_cast<float4*>(&c[idx])[0] = reg_c;
     }
@@ -58,24 +58,30 @@ __global__ void elementwise_add_f16x2_kernel(half *a, half *b, half *c, int N)
 }
 
 __global__ void elementwise_add_f16x8_pack_kernel(half *a, half *b, half *c, int N)
+
 {
+
     int idx = 8*(blockIdx.x*blockDim.x+threadIdx.x);
 
     half pack_a[8],pack_b[8],pack_c[8];
 
-    reinterpret_cast<float4*>(&pack_a)[0] = reinterpret_cast<float4*>(&a[idx])[0];
+    reinterpret_cast<float4*>(&pack_a)[0] = reinterpret_cast<float4*>(&a[idx])[0];  //以128bits的方式取出数据
     reinterpret_cast<float4*>(&pack_b)[0] = reinterpret_cast<float4*>(&b[idx])[0];
 
     #pragma unroll
     for(int i =0;i<8;i+=2)
     {
-        reinterpret_cast<half2*>(&pack_c[i])[0] = __hadd2(reinterpret_cast<half2*>(&pack_a)[i],reinterpret_cast<half2*>(&pack_b)[i]);
+        reinterpret_cast<half2*>(&pack_c[i])[0] = __hadd2(reinterpret_cast<half2*>(&pack_a[i])[0],reinterpret_cast<half2*>(&pack_b[i])[0]);
+        // 每次读取/写入两个半精度的数据（4字节）。
+        // &pack_c[i] 定位到原 half 数组中第 0, 2, 4, 6 个元素的精确地址；
+        // 强转 half2* 后加上 [0]，表示将该地址往后的 4 个字节打包成一个 half2 块进行赋值。
     }
 
     if(idx+7<N)
     {
         reinterpret_cast<float4*>(&c[idx])[0] = reinterpret_cast<float4*>(&pack_c)[0];
     }
+
     else {
         for(int i = 0;idx+i<N;++i)
         {
