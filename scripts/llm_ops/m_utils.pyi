@@ -1,7 +1,5 @@
-from typing import Annotated
+"""Utility functions and device property queries"""
 
-import numpy
-from numpy.typing import NDArray
 
 
 class memoryProps:
@@ -74,12 +72,3 @@ def get_device_propertity(deviceId: int = 0) -> deviceProps:
 
 def print_device_properties(deviceId: int = 0) -> None:
     """Print cuda device property"""
-
-def sgemm_naive(M: int, N: int, K: int, alpha: float, A: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda', writable=False)], B: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda', writable=False)], beta: float, C: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda')]) -> None:
-    """A naive SGEMM implementation calling CUDA code"""
-
-def sgemm_coalesce(M: int, N: int, K: int, alpha: float, A: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda', writable=False)], B: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda', writable=False)], beta: float, C: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda')]) -> None:
-    """A SGEMM implementation coalesce global memory access calling CUDA code"""
-
-def sgemm_sm(M: int, N: int, K: int, alpha: float, A: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda', writable=False)], B: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda', writable=False)], beta: float, C: Annotated[NDArray[numpy.float32], dict(shape=(None, None), order='C', device='cuda')]) -> None:
-    """Shared-memory optimized SGEMM CUDA kernel"""

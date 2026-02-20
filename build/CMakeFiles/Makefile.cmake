@@ -66,4 +66,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/llm_ops.dir/DependInfo.cmake"
   "CMakeFiles/nanobind-static.dir/DependInfo.cmake"
+  "CMakeFiles/llm_ops_stub.dir/DependInfo.cmake"
   )

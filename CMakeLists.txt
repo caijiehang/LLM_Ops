@@ -55,13 +55,21 @@ set_target_properties(llm_ops PROPERTIES
 )
 
 # 2. 生成 .pyi 到 scripts
-add_custom_command(
-    TARGET llm_ops POST_BUILD
-    # 关键点：使用 cmake -E env 临时设置 PYTHONPATH
-    # 这样 python 就能在 scripts 文件夹里找到你的 .so 模块了
-    COMMAND ${CMAKE_COMMAND} -E env "PYTHONPATH=${CMAKE_SOURCE_DIR}/scripts"
-            "${Python_EXECUTABLE}" -m nanobind.stubgen -m llm_ops -O "${CMAKE_SOURCE_DIR}/scripts"
+# 2. 生成 .pyi 到 scripts
+nanobind_add_stub(
+    llm_ops_stub                 # 目标名称，必须唯一但没有其他实际意义 [cite: 95]
+    MODULE llm_ops               # 指定需要被导入并生成存根的模块名称 [cite: 105]
+    RECURSIVE                    # 关键！自动遍历模块层次结构并为每个发现的子模块生成独立的存根 
     
-    COMMENT "正在生成 Python 接口文件 (.pyi) ... 模块路径: ${CMAKE_SOURCE_DIR}/scripts"
-    VERBATIM
+    # 在 RECURSIVE 模式下，可以传入多个 OUTPUT 路径。
+    # 这主要是为了让 CMake 能够追踪这些生成的文件（例如用于 clean 目标或后续依赖），通常是必填的 [cite: 104, 108, 109, 110]
+    OUTPUT 
+        "${CMAKE_SOURCE_DIR}/scripts/llm_ops/__init__.pyi"
+        "${CMAKE_SOURCE_DIR}/scripts/llm_ops/elementwise.pyi"
+        "${CMAKE_SOURCE_DIR}/scripts/llm_ops/gemm.pyi"
+        "${CMAKE_SOURCE_DIR}/scripts/llm_ops/m_utils.pyi"
+        
+    OUTPUT_PATH "${CMAKE_SOURCE_DIR}/scripts"  # 覆盖存根文件写入的基础目录 
+    PYTHON_PATH "${CMAKE_SOURCE_DIR}/scripts"  # 告诉 stubgen 在导入时需要搜索的路径 
+    DEPENDS llm_ops                            # 声明构建依赖，确保在底层的 .so 编译完成后再执行 [cite: 119, 120]
 )

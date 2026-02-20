@@ -17,17 +17,17 @@ def test_sgemm_naive():
     C = torch.randn(M,N,dtype=torch.float32,device='cuda').contiguous()
 
     for _ in range(10):
-        llm_ops.sgemm_naive(M,N,K,alpha,A,B,beta,C)
+        llm_ops.gemm.sgemm_naive(M,N,K,alpha,A,B,beta,C)
         torch.cuda.synchronize()
     print("Profiling...")
-
+    
     nvtx.range_push("PyTorch_SGEMM")
     C_torch = alpha*(A@B)+beta*C
     torch.cuda.synchronize()
     nvtx.range_pop()
     
     nvtx.range_push("Custom_Naive_SGEMM")
-    llm_ops.sgemm_sm(M,N,K,alpha,A,B,beta,C)
+    llm_ops.gemm.sgemm_naive(M,N,K,alpha,A,B,beta,C)
     torch.cuda.synchronize()
     nvtx.range_pop()
 
@@ -36,6 +36,6 @@ def test_sgemm_naive():
     print(f"the max diff is {diff_max}")
 
 if __name__=='__main__':
-    test_sgemm_naive()
+    # test_sgemm_naive()
     # llm_ops.print_device_properties()
-
+    print(dir(llm_ops.gemm))

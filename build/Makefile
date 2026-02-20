@@ -142,6 +142,19 @@ nanobind-static/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nanobind-static.dir/build.make CMakeFiles/nanobind-static.dir/build
 .PHONY : nanobind-static/fast
 
+#=============================================================================
+# Target rules for targets named llm_ops_stub
+
+# Build rule for target.
+llm_ops_stub: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 llm_ops_stub
+.PHONY : llm_ops_stub
+
+# fast build rule for target.
+llm_ops_stub/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/llm_ops_stub.dir/build.make CMakeFiles/llm_ops_stub.dir/build
+.PHONY : llm_ops_stub/fast
+
 home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.o: home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.cpp.o
 .PHONY : home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.o
 
@@ -462,6 +475,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... llm_ops_stub"
 	@echo "... llm_ops"
 	@echo "... nanobind-static"
 	@echo "... home/ubuntu/infra/lib/python3.12/site-packages/nanobind/src/common.o"

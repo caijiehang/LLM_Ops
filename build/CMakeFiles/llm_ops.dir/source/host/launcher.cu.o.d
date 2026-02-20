@@ -186,6 +186,12 @@ CMakeFiles/llm_ops.dir/source/host/launcher.cu.o : /home/ubuntu/llm_ops/source/h
     /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_naive.cuh \
     /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_coalesce.cuh \
     /home/ubuntu/llm_ops/source/kernels/gemm/sgemm_sm.cuh \
+    /home/ubuntu/llm_ops/source/kernels/elementwise/elementwise_add.cuh \
+    /usr/local/cuda/targets/x86_64-linux/include/cuda_fp16.h \
+    /usr/local/cuda/targets/x86_64-linux/include/nv/target \
+    /usr/local/cuda/targets/x86_64-linux/include/nv/detail/__target_macros \
+    /usr/local/cuda/targets/x86_64-linux/include/nv/detail/__preprocessor \
+    /usr/local/cuda/targets/x86_64-linux/include/cuda_fp16.hpp \
     /home/ubuntu/llm_ops/source/utils/util.cuh \
     /usr/include/c++/11/iostream \
     /usr/include/c++/11/ostream \
