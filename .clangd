@@ -1,10 +1,16 @@
 CompileFlags:
   Add:
-    - -fdeclspec
+    - "-x"
+    - "cuda"
+    # 指定你的 CUDA 安装路径
+    - "--cuda-path=/usr/local/cuda"
+    # 指定你的 GPU 架构，请根据你的显卡替换 (例如 RTX 3090/4090 分别是 sm_86 / sm_89)
+    - "--cuda-gpu-arch=sm_120" 
+    # 显式包含 CUDA 头文件路径
+    - "-I/usr/local/cuda/targets/x86_64-linux/include"
+  
   Remove:
-    - -forward-unknown-to-host-compiler
-    - --generate-code*
-    - -rdc*
-    - --options-file*
-    - -Xcompiler*
-    - -arch=native
+    # 移除 clangd 不认识的 nvcc 专属参数
+    - "-x cu"
+    - "-arch=native"
+    - "-forward-unknown-to-host-compiler"
